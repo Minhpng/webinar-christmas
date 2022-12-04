@@ -180,21 +180,22 @@
 	.list-number__item.circle::before {
 		font-size: 1rem;
 		color: #fff;
-		padding: 0.2em 0.8em 0.2em 0.6em;
+		padding: 0em 0.7em 0.3em 0.6em;
 		background-color: var(--clr-red);
 		border-radius: 100vw;
 		left: -2.225rem;
+		top: unset;
 	}
 
 	.list-number__item::before {
 		content: counter(my-counter);
 		color: var(--clr-red);
 		font-weight: bold;
-		font-family: "Bangers", cursive;
+		font-family: "Pacifico", cursive;
 		font-size: 2rem;
 		position: absolute;
 		left: -1.725rem;
-		top: -3px;
+		top: -9px;
 	}
 }
 

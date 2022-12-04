@@ -1,9 +1,10 @@
 .course {
-	background-image: url("../img/background-review.jpg"),
-		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+	// background-image: url("../img/background-review.jpg"),
+	// 	radial-gradient(at center center, #052157 0%, #020c2d 100%);
+	background-image: radial-gradient(at center center, #052157 0%, #020c2d 100%);
 	background-size: cover;
 	background-position: top left;
-	background-blend-mode: overlay;
+	// background-blend-mode: overlay;
 	color: #fff;
 }
 
@@ -51,7 +52,7 @@
 
 .box {
 	padding: 0.8em 2em;
-	background-color: #ffffff4c;
+	background-color: hsla(0, 0%, 100%, 0.1);
 	border-radius: 20px;
 }
 

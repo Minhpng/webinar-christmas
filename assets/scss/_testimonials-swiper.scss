@@ -1,18 +1,26 @@
 /* =========================================
     testimonials swiper
 ============================================ */
+
 .testimonial {
-	/* background-image: url("/assets/img/background-review.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
-	/* background-size: cover;
-    background-position: top left;
-    background-blend-mode: overlay;
-    color: #fff; */
+	background-image: url(../img/heroTopDevider-2.svg),
+		radial-gradient(at center center, #052157 0%, #020c2d 100%);
+	background-position: top;
+	background-repeat: repeat no-repeat, no-repeat;
+	background-size: 500px, cover;
+}
+
+.testimonial-heading {
+	font-family: "Pacifico", serif;
+	letter-spacing: 3px;
+	color: #d2c2ad;
 }
 
 .testimonial .box {
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
 	border-radius: 20px;
-	padding: 2rem 0.2rem 2rem;
+	padding: 1rem 0.2rem 2rem;
+	// box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
+	background-color: transparent;
 }
 
 .testimonial .quote {
@@ -35,8 +43,10 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 0;
 	position: relative;
+	background-color: #fff;
+	padding: 1rem;
+	border-radius: 20px;
 }
 
 .custom-swiper-navigation {
@@ -49,13 +59,22 @@
 .swiper-button-next:after,
 .swiper-button-prev:after {
 	font-weight: 900;
-	color: hsl(229, 65%, 42%);
+	color: #d2c2ad;
 }
 
 .swiper-pagination {
 	position: revert;
 	padding-inline: 8px;
 	width: auto !important;
+}
+
+.testimonial {
+	.swiper-pagination-bullet {
+		background-color: hsla(34, 29%, 75%, 0.5);
+	}
+	.swiper-pagination-bullet-active {
+		background-color: #d2c2ad;
+	}
 }
 
 .swiper-button-next,
@@ -65,6 +84,7 @@
 	left: revert;
 	right: revert;
 	font-size: 1.25rem;
+	color: #d2c2ad;
 }
 
 .swiper-slide h3 {

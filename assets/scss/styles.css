@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Merriweather:wght@900&family=Noto+Sans:ital,wght@0,500;0,700;1,800&family=Pattaya&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Merriweather:wght@900&family=Noto+Sans:ital,wght@0,500;0,700;1,800&family=Pattaya&family=Pacifico&display=swap");
 :root {
   --clr-primary-100: hsla(0, 0%, 100%, 0.05);
   --clr-primary-400: hsl(229, 65%, 42%);
@@ -10,7 +10,7 @@
   --bg-gray-100: hsl(0, 0%, 96%);
   --bg-primary: var(--clr-primary-500);
   --clr-org: hsl(40, 97%, 54%);
-  --clr-red: hsl(0, 82%, 54%);
+  --clr-red: #f61940;
   --clr-red-700: hsl(0, 82%, 50%);
   --clr-blue: hsl(229, 65%, 42%);
   --clr-green: hsl(76, 59%, 51%);
@@ -347,20 +347,21 @@ a {
 .list-number .list-number__item.circle::before {
   font-size: 1rem;
   color: #fff;
-  padding: 0.2em 0.8em 0.2em 0.6em;
+  padding: 0em 0.7em 0.3em 0.6em;
   background-color: var(--clr-red);
   border-radius: 100vw;
   left: -2.225rem;
+  top: unset;
 }
 .list-number .list-number__item::before {
   content: counter(my-counter);
   color: var(--clr-red);
   font-weight: bold;
-  font-family: "Bangers", cursive;
+  font-family: "Pacifico", cursive;
   font-size: 2rem;
   position: absolute;
   left: -1.725rem;
-  top: -3px;
+  top: -9px;
 }
 
 .loader {
@@ -469,11 +470,10 @@ a {
   }
 }
 .hero-section {
-  background-image: url(../img/heroBottomDevider.svg), url(../img/snow.svg), url(../img/heroTopDevider.svg);
-  background-color: hsl(345deg, 78%, 18%);
-  background-position: bottom, bottom, top;
-  background-repeat: no-repeat, repeat, no-repeat;
-  background-size: 100%, auto, 100%;
+  background-image: url(../img/heroBottomDevider.svg), url(../img/snow.svg), url(../img/heroTopDevider-3.png), linear-gradient(0, white 0%, transparent 1%), radial-gradient(at center center, #052157 0%, #020c2d 100%);
+  background-position: 0 bottom, top, top;
+  background-repeat: repeat no-repeat, repeat, repeat no-repeat, no-repeat, no-repeat;
+  background-size: 500px, auto, 300px, auto, cover;
   padding-bottom: 2rem;
   padding-top: 0.5rem;
   position: relative;
@@ -541,8 +541,8 @@ a {
   background-image: url(../img/heroTopDevider.svg);
   width: 100%;
   background-repeat: repeat no-repeat;
-  height: 40px;
-  background-size: 100%;
+  height: 20px;
+  background-size: 150px;
 }
 .hero-section .video-section__left {
   position: relative;
@@ -558,7 +558,7 @@ a {
 .hero-section .video-section__heading {
   font-size: clamp(1.775rem, 2vw + 0.5rem, 2.025rem);
   line-height: 1.3;
-  font-family: "Merriweather", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
@@ -574,6 +574,16 @@ a {
   color: var(--clr-yel);
   line-height: 1.1;
   margin-bottom: 0.475em;
+}
+.hero-section .hero-heading-secondary .letterCap {
+  position: relative;
+  font-size: inherit;
+}
+.hero-section .hero-heading-secondary .letterCap .letterImg {
+  position: absolute;
+  width: 1.5em;
+  top: -0.5em;
+  left: -0.8em;
 }
 .hero-section .list-number__item::before {
   color: var(--clr-yel);
@@ -652,17 +662,22 @@ a {
     testimonials swiper
 ============================================ */
 .testimonial {
-  /* background-image: url("/assets/img/background-review.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
-  /* background-size: cover;
-     background-position: top left;
-     background-blend-mode: overlay;
-     color: #fff; */
+  background-image: url(../img/heroTopDevider-2.svg), radial-gradient(at center center, #052157 0%, #020c2d 100%);
+  background-position: top;
+  background-repeat: repeat no-repeat, no-repeat;
+  background-size: 500px, cover;
+}
+
+.testimonial-heading {
+  font-family: "Pacifico", serif;
+  letter-spacing: 3px;
+  color: #d2c2ad;
 }
 
 .testimonial .box {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
   border-radius: 20px;
-  padding: 2rem 0.2rem 2rem;
+  padding: 1rem 0.2rem 2rem;
+  background-color: transparent;
 }
 
 .testimonial .quote {
@@ -685,8 +700,10 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0;
   position: relative;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 20px;
 }
 
 .custom-swiper-navigation {
@@ -699,13 +716,20 @@ a {
 .swiper-button-next:after,
 .swiper-button-prev:after {
   font-weight: 900;
-  color: hsl(229deg, 65%, 42%);
+  color: #d2c2ad;
 }
 
 .swiper-pagination {
   position: revert;
   padding-inline: 8px;
   width: auto !important;
+}
+
+.testimonial .swiper-pagination-bullet {
+  background-color: hsla(34deg, 29%, 75%, 0.5);
+}
+.testimonial .swiper-pagination-bullet-active {
+  background-color: #d2c2ad;
 }
 
 .swiper-button-next,
@@ -715,6 +739,7 @@ a {
   left: revert;
   right: revert;
   font-size: 1.25rem;
+  color: #d2c2ad;
 }
 
 .swiper-slide h3 {
@@ -723,11 +748,24 @@ a {
   color: var(--clr-white);
 }
 
+.course__gift-icon {
+  font-size: clamp(2rem, 2vw + 1rem, 4rem);
+  margin-block: 0.5rem 1rem;
+}
+
+.course__gift-heading {
+  margin-block: 0.5rem 1rem;
+  font-family: "Pacifico", serif;
+  font-size: var(--fs-heading);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  text-transform: capitalize;
+}
+
 .course {
-  background-image: url("../img/background-review.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-image: radial-gradient(at center center, #052157 0%, #020c2d 100%);
   background-size: cover;
   background-position: top left;
-  background-blend-mode: overlay;
   color: #fff;
 }
 
@@ -774,7 +812,7 @@ a {
 
 .box {
   padding: 0.8em 2em;
-  background-color: rgba(255, 255, 255, 0.2980392157);
+  background-color: hsla(0deg, 0%, 100%, 0.1);
   border-radius: 20px;
 }
 

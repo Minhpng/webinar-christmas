@@ -74,7 +74,14 @@
 			<div class="hero-middle-box">
 				<div class="container">
 					<h2 class="hero-heading-secondary">
-						Sau 2 buổi học KHAI MỞ bạn sẽ nhận được:
+						Sau 2 buổi học
+						<span class="letterCap"
+							><img
+								class="letterImg"
+								src="./assets/img/xmas-hat.png"
+								alt=""
+							/>K</span
+						>hai Mở bạn sẽ nhận được:
 					</h2>
 					<ul class="list-number">
 						<li class="list-number__item">
@@ -160,7 +167,7 @@
             ================================= -->
 		<section class="testimonial text-center section">
 			<div class="container w800">
-				<h2 class="fs-sec-heading fw-bold">
+				<h2 class="fs-primary-heading fw-bold testimonial-heading">
 					Những người tham dự trước nói gì?
 				</h2>
 				<div class="swiper box">
@@ -190,7 +197,7 @@
 		<section class="section course__gift">
 			<div class="container">
 				<div class="gift__item text-center">
-					<h2 class="fs-primary-heading">QUÀ TẶNG #1</h2>
+					<h2 class="course__gift-heading">Quà tặng #1</h2>
 					<p class="gift__item-title fs-primary-heading fw-bold">
 						Khoá học video:<br />
 						"10 ngày nắm vững phát âm IPA giọng bản xứ và đọc làu làu từ điển"
@@ -219,7 +226,7 @@
 					</div>
 				</section>
 				<div class="gift__item text-center">
-					<h2 class="fs-primary-heading">QUÀ TẶNG #2</h2>
+					<h2 class="course__gift-heading">Quà tặng #2</h2>
 					<p class="gift__item-title fs-primary-heading fw-bold">
 						Khoá học video:<br />
 						"60 điểm ngữ pháp lấy lại tất tần tật căn bản mà người ta không muốn
@@ -258,22 +265,23 @@
 				<div class="course-wrapper">
 					<div class="course__info box-with-border">
 						<div class="course__info-item">
-							<h2 class="fs-sub-heading fw-bold">KHOÁ HỌC SẼ BẮT ĐẦU VÀO</h2>
+							<h2 class="fs-md fw-bold">KHOÁ HỌC SẼ BẮT ĐẦU VÀO</h2>
 							<p
 								class="fs-body text-yel fw-bold"
 								style="text-transform: capitalize"
 							>
-								{{dataPage.start_at}}
+								<!-- {{dataPage.start_at}} -->
+								Chủ Nhật, Ngày 04 Tháng 12 Năm 2022
 							</p>
 						</div>
 						<div class="course__info-item">
-							<h3 class="fs-sub-heading fw-bold">HÌNH THỨC HỌC:</h3>
+							<h3 class="fs-md fw-bold">HÌNH THỨC HỌC:</h3>
 							<p class="fs-body">
 								Học ONLINE, chỉ cần bấm link tham dự, không cần cài đặt gì thêm.
 							</p>
 						</div>
 						<div class="course__info-item">
-							<h2 class="fs-sub-heading fw-bold">CHI PHÍ:</h2>
+							<h2 class="fs-md fw-bold">CHI PHÍ:</h2>
 							<p class="fs-body course-free text-yel strike strong">
 								2.000.000 VNĐ
 							</p>
@@ -282,7 +290,7 @@
 							</p>
 						</div>
 						<div class="course__info-item">
-							<h3 class="fs-sub-heading fw-bold">THỜI GIAN HỌC:</h3>
+							<h3 class="fs-md fw-bold">THỜI GIAN HỌC:</h3>
 							<p class="fs-body">
 								<span ng-if="dataPage.order==10">1 buổi duy nhất</span
 								><span ng-if="dataPage.order!=10"
@@ -587,6 +595,7 @@
 
 		const swiper = new Swiper(".swiper", {
 			loop: true,
+			spaceBetween: 10,
 
 			autoplay: {
 				delay: 5000,
@@ -606,13 +615,13 @@
 
 			breakpoints: {
 				640: {
-					slidesPerView: 1,
-					spaceBetween: 50,
+					slidesPerView: 2,
+					spaceBetween: 30,
 				},
 
 				1024: {
 					slidesPerView: 2,
-					spaceBetween: 60,
+					// spaceBetween: 40,
 				},
 			},
 		})
