@@ -602,7 +602,7 @@ a {
 }
 .hero-section .hero-gift__heading::before {
   content: "";
-  background-image: url(../img/giftIcon.svg);
+  background-image: url(../img/giftIcon.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
