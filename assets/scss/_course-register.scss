@@ -1,9 +1,11 @@
 .course {
 	// background-image: url("../img/background-review.jpg"),
 	// 	radial-gradient(at center center, #052157 0%, #020c2d 100%);
-	background-image: radial-gradient(at center center, #052157 0%, #020c2d 100%);
-	background-size: cover;
-	background-position: top left;
+	background-image: url(../img/backgroundAnimal.png),
+		radial-gradient(at center center, #052157 0%, #020c2d 100%);
+	background-size: 500px, cover;
+	background-position: right bottom, center;
+	background-repeat: repeat no-repeat, no-repeat;
 	// background-blend-mode: overlay;
 	color: #fff;
 }
@@ -34,7 +36,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	row-gap: 18px;
+	row-gap: 5px;
 }
 
 .course__info-item .km-text {

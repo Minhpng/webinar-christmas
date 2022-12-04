@@ -23,6 +23,7 @@
 	align-items: flex-start;
 	justify-content: center;
 	list-style-type: none;
+	row-gap: 5px;
 }
 
 .about-content .km-link i {
@@ -45,13 +46,18 @@
 ul .list-wrap {
 	display: flex;
 	justify-content: start;
-	align-items: flex-start;
+	align-items: center;
 	column-gap: 10px;
+
+	.fs-body {
+		margin-bottom: 0;
+	}
 }
 
 ul .list-wrap i {
 	font-size: 30px;
 	color: var(--clr-red);
+
 	/* margin-top: 5px; */
 }
 
@@ -65,4 +71,11 @@ ul .list-wrap i {
 	font-size: 18px;
 	font-weight: 500;
 	color: var(--clr-blue);
+
+	i {
+		font-size: 1.5rem;
+		margin-right: 5px;
+		top: 3px;
+		position: relative;
+	}
 }
