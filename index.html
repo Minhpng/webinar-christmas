@@ -6,7 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 
-		<link rel="stylesheet" href="./assets/scss/styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -14,6 +17,7 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
+		<link rel="stylesheet" href="./assets/scss/styles.css" />
 	</head>
 	<body>
 		<section class="hero-section">
@@ -52,7 +56,7 @@
 				<div class="video-section__right video-wrapper">
 					<div class="image-wrapper">
 						<span class="fixed-image snowFlower"
-							><img src="./assets/img/snowFlower.svg" alt=""
+							><img src="./assets/img/snowMan.svg" alt=""
 						/></span>
 					</div>
 					<span class="play-icon">
@@ -64,6 +68,7 @@
 							type="video/mp4"
 						/>
 					</video>
+					<div class="video-bottom"></div>
 				</div>
 			</div>
 			<div class="hero-middle-box">
@@ -149,5 +154,467 @@
 				/></span>
 			</div>
 		</section>
+
+		<!-- ===========================
+                testimonial
+            ================================= -->
+		<section class="testimonial text-center section">
+			<div class="container w800">
+				<h2 class="fs-sec-heading fw-bold">
+					Những người tham dự trước nói gì?
+				</h2>
+				<div class="swiper box">
+					<!-- <p class="quote"><i class="fa-solid fa-quote-right"></i></p> -->
+					<div reviewWrapper class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="./assets/img/review1.jpg" alt="" />
+						</div>
+					</div>
+					<div class="custom-swiper-navigation">
+						<div class="swiper-button-prev">
+							<i class="fa-solid fa-chevron-left"></i>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next">
+							<i class="fa-solid fa-chevron-right"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===========================
+                QUA TANG
+            ================================= -->
+
+		<section class="section course__gift">
+			<div class="container">
+				<div class="gift__item text-center">
+					<h2 class="fs-primary-heading">QUÀ TẶNG #1</h2>
+					<p class="gift__item-title fs-primary-heading fw-bold">
+						Khoá học video:<br />
+						"10 ngày nắm vững phát âm IPA giọng bản xứ và đọc làu làu từ điển"
+					</p>
+					<p class="fs-body">👇 Xem là hiểu ngay 👇</p>
+					<div class="videos-box mb10">
+						<div video-wrapper class="video-wrapper">
+							<span class="play-icon">
+								<i class="fas fa-play"></i>
+							</span>
+							<video
+								video-controler
+								poster="./assets/img/video-thumb-gift1.jpg"
+							>
+								<source
+									src="https://static.langkingdom.com/webinars/videos/LP-phat-am-220814.mp4"
+									type="video/mp4"
+								/>
+							</video>
+						</div>
+					</div>
+				</div>
+				<section class="divider section">
+					<div class="container text-center">
+						<img src="./assets/img/divider.svg" class="divider-item" alt="" />
+					</div>
+				</section>
+				<div class="gift__item text-center">
+					<h2 class="fs-primary-heading">QUÀ TẶNG #2</h2>
+					<p class="gift__item-title fs-primary-heading fw-bold">
+						Khoá học video:<br />
+						"60 điểm ngữ pháp lấy lại tất tần tật căn bản mà người ta không muốn
+						hệ thống hóa cho bạn!"
+					</p>
+					<p class="fs-body">👇 Xem là hiểu ngay 👇</p>
+					<div class="videos-box mb10">
+						<div video-wrapper class="video-wrapper">
+							<span class="play-icon">
+								<i class="fas fa-play"></i>
+							</span>
+							<video
+								video-controler
+								poster="./assets/img/video-thumb-gift2.jpg"
+							>
+								<source
+									src="https://static.langkingdom.com/webinars/videos/LP-ngu-phap-220814.mp4"
+									type="video/mp4"
+								/>
+							</video>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===================
+			KHOA HOC
+			================== -->
+
+		<section
+			class="section course"
+			ng-if="dataPage.registered==0 && !dataPage.pre_on_air && dataPage.state<3"
+		>
+			<div class="container text-center">
+				<div class="course-wrapper">
+					<div class="course__info box-with-border">
+						<div class="course__info-item">
+							<h2 class="fs-sub-heading fw-bold">KHOÁ HỌC SẼ BẮT ĐẦU VÀO</h2>
+							<p
+								class="fs-body text-yel fw-bold"
+								style="text-transform: capitalize"
+							>
+								{{dataPage.start_at}}
+							</p>
+						</div>
+						<div class="course__info-item">
+							<h3 class="fs-sub-heading fw-bold">HÌNH THỨC HỌC:</h3>
+							<p class="fs-body">
+								Học ONLINE, chỉ cần bấm link tham dự, không cần cài đặt gì thêm.
+							</p>
+						</div>
+						<div class="course__info-item">
+							<h2 class="fs-sub-heading fw-bold">CHI PHÍ:</h2>
+							<p class="fs-body course-free text-yel strike strong">
+								2.000.000 VNĐ
+							</p>
+							<p class="fs-body course-free text-yel" ng-if="!fromTiktok">
+								MIỄN PHÍ
+							</p>
+						</div>
+						<div class="course__info-item">
+							<h3 class="fs-sub-heading fw-bold">THỜI GIAN HỌC:</h3>
+							<p class="fs-body">
+								<span ng-if="dataPage.order==10">1 buổi duy nhất</span
+								><span ng-if="dataPage.order!=10"
+									>{{dataPage.qty}} buổi (1.5 giờ/buổi)</span
+								>
+							</p>
+						</div>
+						<div class="course__info-item box">
+							<p class="fs-body pb10">Theo giờ Việt Nam (GMT+7)</p>
+							<div class="course-date">
+								<p class="fs-body">
+									<i class="fas fa-calendar-alt text-yel"></i>
+									<span class="fw-bold"
+										><span ng-if="dataPage.date_from"
+											><!---{{dataPage.date_from}}--->
+											04 - </span
+										><!--{{dataPage.date_to}}-->
+										05/12/2022</span
+									>
+								</p>
+								<p class="fs-body fw-bold">
+									<i class="fas fa-clock text-yel"></i>
+									<!-- <strong>{{dataPage.time}}</strong> -->
+									08 PM
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- ng-if="dataPage.order<10" =====================================================================================-->
+					<div class="course__gift" ng-if="dataPage.order<10">
+						<div class="course__gift-icon">
+							<i class="fa-solid fa-gift fa-beat"></i>
+						</div>
+						<p class="fs-body">
+							Đăng ký <span class="text-yel fw-bold">NGAY HÔM NAY</span> để được
+							<span class="text-yel strong"
+								>HỌC <span ng-if="!fromTiktok">MIỄN PHÍ</span></span
+							>
+							và có cơ hội <span class="text-yel strong">ĐƯỢC TẶNG</span> 2 khoá
+							học đặc biệt trị giá
+							<span class="text-yel inline strong">4.000.000 VNĐ</span>.
+						</p>
+						<p class="fs-body">Thời gian đăng kí và nhận quà còn:</p>
+						<h2 id="endDay-countdown" class="fw-bold fs-sec-heading text-yel">
+							<span class="countdown-number">12</span>
+							:
+							<span class="countdown-number">25</span> :
+							<span class="countdown-number">52</span>
+							<!-- <span class="countdown-number">{{timerCountdown.hours}}</span>
+							:
+							<span class="countdown-number">{{timerCountdown.minutes}}</span> :
+							<span class="countdown-number">{{timerCountdown.seconds}}</span> -->
+						</h2>
+					</div>
+				</div>
+
+				<div class="pointer text-center">
+					<i class="fa-solid fa-hand-point-down fa-bounce"></i>
+				</div>
+			</div>
+		</section>
+
+		<!-- ng-if="dataPage.registered==0 && !dataPage.pre_on_air && dataPage.state<3" -->
+		<section
+			id="register-form"
+			class="register-form section"
+			ng-if="dataPage.registered==0 && !dataPage.pre_on_air && dataPage.state<3"
+		>
+			<div class="container text-center w500">
+				<div class="form-wrapper">
+					<div class="form-cta">
+						<h2 class="fs-primary-heading fw-bold">
+							MỖI NGƯỜI <span class="text-red">CHỈ ĐƯỢC</span>
+							<span class="inline">ĐĂNG KÝ 1 LẦN</span>
+						</h2>
+						<!-- <p class="fs-body text-red">Nếu bạn bỏ lỡ khoá học, bạn sẽ KHÔNG THỂ đăng ký lại!</p> -->
+						<p class="fs-body">
+							Xin điền thông tin email, số điện thoại chính xác để nhận thông
+							tin khoá học
+						</p>
+					</div>
+
+					<form
+						class="text-center form-registor"
+						id="registor"
+						ng-submit="register()"
+					>
+						<!-- <div
+							class="block phone-number"
+							ng-class="{'red':!checkDataPost('phone_number') && submited}"
+						>
+							<div class="number-text">
+								<span class="options-wrap dropdown">
+									<button
+										class="btn dropdown-toggle"
+										type="button"
+										id="dropdownMenuLink"
+										data-toggle="dropdown"
+										aria-haspopup="true"
+										aria-expanded="true"
+									>
+										<div
+											class="flag"
+											ng-style="{'background-image': 'url(' + (regInfo.country_flag) + ')'}"
+										></div>
+										{{regInfo.calling_code}}
+										<span class="caret"></span>
+									</button>
+
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<li
+											class="no-icon"
+											ng-repeat="callingCode in calling_codes"
+										>
+											<a
+												class="calling-code-item"
+												ng-click="regInfo.calling_code = callingCode.calling_code; regInfo.country_flag = callingCode.country_flag; regInfo.country_code = callingCode.code"
+											>
+												<div
+													class="flag"
+													ng-style="{'background-image': 'url(' + (callingCode.country_flag) + ')'}"
+												></div>
+												&nbsp;<span
+													>{{::callingCode.calling_code}}
+													({{callingCode.name}})</span
+												>
+											</a>
+										</li>
+									</ul>
+								</span>
+								<input
+									class="tel-number"
+									type="tel"
+									required="required"
+									ng-model="regInfo.phone_number"
+									maxlength="13"
+									placeholder="*Số điện thoại..."
+								/>
+							</div>
+						</div> -->
+						<input
+							type="text"
+							name="name"
+							placeholder="*Số điện thoại..."
+							required
+							ng-model="regInfo.name"
+							ng-class="{'red':!checkDataPost('name') && submited}"
+						/>
+						<input
+							type="text"
+							name="name"
+							placeholder="*Tên của bạn..."
+							required
+							ng-model="regInfo.name"
+							ng-class="{'red':!checkDataPost('name') && submited}"
+						/>
+						<input
+							type="email"
+							name="email"
+							placeholder="*Email của bạn..."
+							required
+							ng-model="regInfo.email"
+						/>
+						<input
+							class="btn"
+							type="submit"
+							value="Tôi đăng ký tham gia"
+							ng-class="{'red':!checkDataPost('email') && submited}"
+							ng-disabled="is_submit"
+						/>
+					</form>
+
+					<div class="form-cta">
+						<p class="fs-body">
+							<strong class="text-blue">Lưu ý:</strong
+							><span class="text-red">
+								Quà tặng chỉ được công bố sau khi buổi học kết thúc. Nếu bạn rời
+								đi sớm, bạn sẽ không có cơ hội nhận quà nhé!</span
+							>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="divider">
+			<div class="container text-center">
+				<img src="./assets/img/divider.svg" class="divider-item" alt="" />
+			</div>
+		</section>
+
+		<!--//////////////////////// ABOUT SECTION///////////////////////////  -->
+		<section class="about section">
+			<div class="container">
+				<div class="about-info">
+					<img src="./assets/img/person.png" alt="" />
+				</div>
+				<div class="about-content w700">
+					<h2 class="fs-primary-heading fw-bold text-center text-red">
+						Đôi nét về thầy Thắng Phạm
+					</h2>
+					<ul>
+						<li>
+							<div class="list-wrap">
+								<i class="fas fa-check-circle"></i>
+								<p class="fs-body">
+									Founder and CEO Lang Kingdom Ltd. Pte. Singapore
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="list-wrap">
+								<i class="fas fa-check-circle"></i>
+								<p class="fs-body">Đồng sáng lập trang web HelloChao.vn</p>
+							</div>
+						</li>
+						<li>
+							<div class="list-wrap">
+								<i class="fas fa-check-circle"></i>
+								<p class="fs-body">
+									Chủ kênh Youtube dạy tiếng Anh cùng tên “Thắng Phạm”
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="list-wrap">
+								<i class="fas fa-check-circle"></i>
+								<p class="fs-body">
+									Tác giả phương pháp giảng dạy tiếng Anh Natural Approach
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="list-wrap">
+								<i class="fas fa-check-circle"></i>
+								<p class="fs-body">
+									Tác giả phương pháp dạy phát âm tiếng Anh “Phương pháp Đọc
+									Tách-Ghép âm”
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="list-wrap">
+								<i class="fas fa-check-circle"></i>
+								<p class="fs-body">
+									Kinh nghiệm 20 năm nghiên cứu phương pháp và giảng dạy bộ môn
+									tiếng Anh
+								</p>
+							</div>
+						</li>
+					</ul>
+					<p class="text-center text-red km-key-text fw-bold">
+						MỜI BẠN ĐĂNG KÝ VÀ THEO DÕI KÊNH YOUTUBE CỦA THẦY THẮNG PHẠM TẠI:
+					</p>
+					<a
+						rel="noopener"
+						href="https://youtube.com/ThangPhamTV"
+						target="_blank"
+						class="km-link text-center inline"
+						><i class="fa-brands fa-youtube"></i>youtube.com/ThangPhamTV</a
+					>
+				</div>
+			</div>
+		</section>
 	</body>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script>
+		const reviewList = [
+			{ src: "./assets/img/comment/review-20.jpg" },
+			{ src: "./assets/img/comment/review-21.jpg" },
+			{ src: "./assets/img/comment/review-22.jpg" },
+			{ src: "./assets/img/comment/review-24.jpg" },
+			{ src: "./assets/img/comment/review-26.jpg" },
+			{ src: "./assets/img/comment/review-27.jpg" },
+			{ src: "./assets/img/comment/review-28.jpg" },
+			{ src: "./assets/img/comment/review-29.jpg" },
+			{ src: "./assets/img/comment/review-32.jpg" },
+			{ src: "./assets/img/comment/review-33.jpg" },
+			{ src: "./assets/img/comment/review-37.jpg" },
+			{ src: "./assets/img/comment/review-40.jpg" },
+			{ src: "./assets/img/comment/review-45.jpg" },
+			{ src: "./assets/img/comment/review-51.jpg" },
+			{ src: "./assets/img/comment/review-54.jpg" },
+			{ src: "./assets/img/comment/review-57.jpg" },
+			{ src: "./assets/img/comment/review-58.jpg" },
+			{ src: "./assets/img/comment/review-61.jpg" },
+			{ src: "./assets/img/comment/review-69.jpg" },
+			{ src: "./assets/img/comment/review-73.jpg" },
+			{ src: "./assets/img/comment/review-75.jpg" },
+			{ src: "./assets/img/comment/review-77.jpg" },
+		]
+		const htmlReview = reviewList.map((review) => {
+			return `
+                    <div class="swiper-slide">
+                      <img src="${review.src}" alt="">
+                    </div>
+                    `
+		})
+
+		const reviewWrapper = document.querySelector("[reviewWrapper]")
+		reviewWrapper.innerHTML = htmlReview.join("")
+
+		const swiper = new Swiper(".swiper", {
+			loop: true,
+
+			autoplay: {
+				delay: 5000,
+				pauseOnMouseEnter: true,
+			},
+
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+				rewind: true,
+			},
+
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+
+			breakpoints: {
+				640: {
+					slidesPerView: 1,
+					spaceBetween: 50,
+				},
+
+				1024: {
+					slidesPerView: 2,
+					spaceBetween: 60,
+				},
+			},
+		})
+	</script>
 </html>

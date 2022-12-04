@@ -3,15 +3,17 @@
 		url(../img/heroTopDevider.svg),
 		// linear-gradient(to top, var(--clr-primary-500), var(--clr-primary-400))
 ;
-	background-color: #102859;
+	background-color: hsl(345, 78%, 18%);
+	// background-color: #102859;
 	background-position: bottom, bottom, top;
 	background-repeat: no-repeat, repeat, no-repeat;
-	background-size: 100%, contain, 100%;
+	background-size: 100%, auto, 100%;
+	// background-attachment: local, fixed, local;
 
 	padding-bottom: 2rem;
 	padding-top: 0.5rem;
 
-	overflow-x: hidden;
+	// overflow-x: hidden;
 
 	@media screen and (min-width: 50rem) {
 		padding-bottom: 4rem;
@@ -40,6 +42,8 @@
 	}
 
 	.support-icon {
+		color: var(--clr-yel);
+
 		svg {
 			width: 45px;
 			height: 45px;
@@ -54,6 +58,8 @@
 		text-transform: uppercase;
 
 		.support-body__number {
+			color: var(--clr-yel);
+
 			font-size: 1.25rem;
 			font-weight: 700;
 		}
@@ -77,11 +83,18 @@
 		.image-wrapper {
 			z-index: -1;
 		}
+		.video-bottom {
+			position: absolute;
+			top: 100%;
+			background-image: url(../img/heroTopDevider.svg);
+			width: 100%;
+			background-repeat: repeat no-repeat;
+			height: 40px;
+			background-size: 100%;
+		}
 	}
 	.video-section__left {
-		.image-wrapper {
-			width: 75rem;
-		}
+		position: relative;
 	}
 
 	.video-section__small-heading {
@@ -102,7 +115,8 @@
 	}
 
 	.hero-middle-box {
-		background-color: hsla(0, 0%, 0%, 0.1);
+		background-color: hsla(0, 30%, 10%, 0.2);
+		// background-color: hsl(220, 70%, 21%);
 		padding-block: 1rem;
 		margin-block: 2rem;
 		color: #fff;
@@ -115,6 +129,7 @@
 		line-height: 1.1;
 		margin-bottom: 0.475em;
 	}
+
 	.list-number__item::before {
 		color: var(--clr-yel);
 	}
@@ -194,7 +209,7 @@
 
 	.giftBox {
 		width: 50px;
-		left: 20px;
+		left: -35%;
 		top: 150px;
 		z-index: -1;
 		rotate: -30deg;

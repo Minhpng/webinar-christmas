@@ -1,0 +1,74 @@
+/* =========================================
+    testimonials swiper
+============================================ */
+.testimonial {
+	/* background-image: url("/assets/img/background-review.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+	/* background-size: cover;
+    background-position: top left;
+    background-blend-mode: overlay;
+    color: #fff; */
+}
+
+.testimonial .box {
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
+	border-radius: 20px;
+	padding: 2rem 0.2rem 2rem;
+}
+
+.testimonial .quote {
+	text-align: right;
+	right: 5%;
+	font-size: 100px;
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.1);
+	position: absolute;
+	z-index: 10;
+	top: 0;
+}
+
+.testimonial .swiper-wrapper {
+	align-items: center;
+}
+
+.testimonial .swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0;
+	position: relative;
+}
+
+.custom-swiper-navigation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-inline: 0.575rem;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	font-weight: 900;
+	color: hsl(229, 65%, 42%);
+}
+
+.swiper-pagination {
+	position: revert;
+	padding-inline: 8px;
+	width: auto !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	top: 12px;
+	position: relative;
+	left: revert;
+	right: revert;
+	font-size: 1.25rem;
+}
+
+.swiper-slide h3 {
+	font-size: 25px;
+	font-weight: 700;
+	color: var(--clr-white);
+}

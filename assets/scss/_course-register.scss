@@ -1,0 +1,118 @@
+.course {
+	background-image: url("../img/background-review.jpg"),
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+	background-size: cover;
+	background-position: top left;
+	background-blend-mode: overlay;
+	color: #fff;
+}
+
+@media (min-width: 768px) {
+	.course .course-wrapper {
+		display: grid;
+		grid-template-columns: 1.05fr 1fr;
+		align-items: center;
+		justify-items: center;
+		gap: 15px;
+	}
+}
+
+.course .course-wrapper {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	gap: 15px;
+}
+
+.course .km-sec-heading {
+	color: var(--clr-white);
+}
+
+.course__info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 18px;
+}
+
+.course__info-item .km-text {
+	margin-bottom: 0;
+}
+
+.course__info-item .strike:after {
+	background-color: var(--clr-red);
+}
+
+.course__info-item .course-free {
+	font-size: var(--fs-sec-heading);
+	font-weight: 700;
+}
+
+.box {
+	padding: 0.8em 2em;
+	background-color: #ffffff4c;
+	border-radius: 20px;
+}
+
+.course-date {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 5px 15px;
+}
+
+.course .pointer {
+	font-size: 3rem;
+	padding-top: 2rem;
+}
+
+.countdown-number {
+	padding: 0.5rem 0.8rem;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.05);
+	min-width: 56px;
+	display: inline-block;
+}
+
+/* =========================================
+      form section
+  ============================================ */
+
+.form-wrapper {
+	padding: 0.875em 0.875em 0;
+	border: 2px solid var(--clr-red);
+	user-select: none;
+}
+
+input[type="text"],
+input[type="email"] {
+	background-color: transparent;
+	width: min(100%, 400px);
+	margin-bottom: 20px;
+	display: block;
+	margin-inline: auto;
+	font-size: 18px;
+	padding: 0.875em 2em;
+	border: 1px solid rgb(220, 220, 220);
+	border-radius: 100vw;
+}
+
+input[type="submit"] {
+	margin-bottom: 1rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+#phone {
+	padding: 0 0 0 40px;
+	background-color: transparent;
+	width: 100%;
+}
