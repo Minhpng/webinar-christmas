@@ -527,7 +527,7 @@ a {
   justify-items: space-between;
   align-items: center;
   color: white;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 @media screen and (min-width: 50rem) {
   .hero-section .hero-video-section {
