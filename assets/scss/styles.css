@@ -471,10 +471,10 @@ a {
   }
 }
 .hero-section {
-  background-image: url(../img/heroBottomDevider.svg), url(../img/snow.svg), url(../img/snow.svg), url(../img/heroTopDevider-3.svg), linear-gradient(0, white 0%, transparent 1%), radial-gradient(at center center, #052157 0%, #020c2d 100%);
-  background-position: bottom, 0px top, 0px bottom, top, bottom, top;
+  background-image: url(../img/heroBottomDevider.svg), url(../img/snow.svg), url(../img/snow.svg), url(../img/heroTopDevider.svg), linear-gradient(0, white 0%, transparent 1%), radial-gradient(at center center, #052157 0%, #020c2d 100%);
+  background-position: bottom, 0px top, 0px bottom, left top, bottom, top;
   background-repeat: repeat no-repeat, repeat no-repeat, repeat no-repeat, repeat no-repeat, no-repeat, no-repeat;
-  background-size: 580px, 200px, 260px, 200px, auto, cover;
+  background-size: 580px, 200px, 260px, 400px, auto, cover;
   padding-bottom: 2rem;
   padding-top: 0.5rem;
   position: relative;
@@ -538,15 +538,23 @@ a {
 }
 .hero-section .video-section__right .image-wrapper {
   z-index: -1;
+  top: 0;
+}
+.hero-section .video-section__right .snowMan {
+  width: 30px;
+  right: 20px;
+  top: -41px;
+  z-index: -1;
 }
 .hero-section .video-section__right .video-bottom {
   position: absolute;
-  top: 100%;
-  background-image: url(../img/heroTopDevider-3.svg);
+  top: -17px;
+  background-image: url(../img/heroBottomDevider.svg);
   width: 100%;
   background-repeat: repeat no-repeat;
   height: 20px;
-  background-size: 150px;
+  background-size: 200px;
+  background-position: right;
 }
 .hero-section .video-section__left {
   position: relative;
@@ -647,12 +655,6 @@ a {
   width: 100px;
   right: 0;
   top: calc(100% - 80px);
-}
-.hero-section .snowFlower {
-  width: 30px;
-  right: 20px;
-  top: -150px;
-  z-index: -1;
 }
 .hero-section .giftBox {
   width: 50px;
