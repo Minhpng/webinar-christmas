@@ -1,20 +1,17 @@
 .hero-section {
 	background-image: url(../img/heroBottomDevider.svg), url(../img/snow.svg),
-		url(../img/heroTopDevider-3.svg),
-		// url(../img/landing-christmas-01-1920x1080.jpg),
+		url(../img/snow.svg), url(../img/heroTopDevider-3.svg),
 		linear-gradient(0, white 0%, transparent 1%),
 		radial-gradient(at center center, #052157 0%, #020c2d 100%);
-	// background-color: hsl(174, 77%, 10%);
-	// background-color: #102859;
-	// background-position: bottom, bottom, top, -650px 390px;
-	background-position: bottom, top, top;
-	background-repeat: repeat no-repeat, repeat, repeat no-repeat, no-repeat,
-		no-repeat;
-	background-size: 580px, auto, 200px, auto, cover;
-	// background-attachment: local, fixed, local;
-
+	background-position: bottom, 0px top, 0px bottom, top, bottom, top;
+	background-repeat: repeat no-repeat, repeat no-repeat, repeat no-repeat,
+		repeat no-repeat, no-repeat, no-repeat;
+	background-size: 580px, 200px, 260px, 200px, auto, cover;
 	padding-bottom: 2rem;
 	padding-top: 0.5rem;
+	position: relative;
+
+	animation: snowMoving 30s linear infinite;
 
 	// overflow-x: hidden;
 
@@ -228,5 +225,15 @@
 		top: 150px;
 		z-index: -1;
 		rotate: -30deg;
+	}
+}
+
+@keyframes snowMoving {
+	from {
+		background-position: 0px bottom, 0px top, 0px bottom, top, bottom, top;
+	}
+
+	to {
+		background-position: -200px bottom, 300px top, 0 bottom, top, bottom, top;
 	}
 }
