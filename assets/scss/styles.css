@@ -478,8 +478,6 @@ a {
   padding-bottom: 2rem;
   padding-top: 0.5rem;
   position: relative;
-  -webkit-animation: snowMoving 30s linear infinite;
-          animation: snowMoving 30s linear infinite;
   position: relative;
 }
 @media screen and (min-width: 50rem) {
