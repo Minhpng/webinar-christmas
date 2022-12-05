@@ -549,7 +549,7 @@ a {
   top: -17px;
   background-image: url(../img/heroBottomDevider.svg);
   width: 100%;
-  background-repeat: repeat no-repeat;
+  background-repeat: no-repeat;
   height: 20px;
   background-size: 200px;
   background-position: right;
