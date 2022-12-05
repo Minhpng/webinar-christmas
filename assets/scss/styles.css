@@ -541,12 +541,12 @@ a {
 .hero-section .video-section__right .snowMan {
   width: 30px;
   right: 20px;
-  top: -41px;
+  top: -43px;
   z-index: -1;
 }
 .hero-section .video-section__right .video-bottom {
   position: absolute;
-  top: -17px;
+  top: -19px;
   background-image: url(../img/heroBottomDevider.svg);
   width: 100%;
   background-repeat: no-repeat;
